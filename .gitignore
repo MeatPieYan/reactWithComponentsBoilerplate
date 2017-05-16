@@ -1,6 +1,7 @@
 /node_modules
 /.idea
-/run
-/logs
 npm-debug.log*
-/app/public/dist
+/dist
+/views/prd
+/views/dev/*
+**/.DS_Store

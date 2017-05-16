@@ -1,17 +1,17 @@
 module.exports = {
-  extends: 'eslint-config-egg',
-  parser: 'babel-eslint',
-  parserOptions: {
-    sourceType: 'module',
-  },
-  plugins: [
-    'react',
+  "extends": "airbnb",
+  "plugins": [
+    "react",
+    "jsx-a11y",
+    "import"
   ],
-  rules: {
-    // for variables in jsx
-    'react/jsx-uses-vars': 'error',
-    // see https://github.com/eslint/eslint/issues/6274
-    'generator-star-spacing': 'off',
-    'babel/generator-star-spacing': 'off',
-  },
+  "rules": {
+    "comma-dangle": ["error", "never"],
+    "import/no-extraneous-dependencies": ["error", {"devDependencies": ["**/*.test.js", "**/*.dev.**.js", "**/*.dev.js"]}],
+    "jsx-quotes": ["error", "prefer-single"],
+    "no-param-reassign": ["off"],
+    "no-underscore-dangle": ["off"],
+    "react/jsx-boolean-value": ["error", "always"],
+    "react/jsx-filename-extension": ["error", { "extensions": [".js", ".jsx"] }]
+  }
 };
